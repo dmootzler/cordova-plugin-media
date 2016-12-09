@@ -196,6 +196,9 @@
         NSError* error = nil;
 
         self.avSession = [AVAudioSession sharedInstance];
+        NSError *err = nil;
+        [self.avSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&err];
+        [self.avSession setActive:YES error:&err];
         if (error) {
             // is not fatal if can't get AVAudioSession , just log the error
             NSLog(@"error creating audio session: %@", [[error userInfo] description]);

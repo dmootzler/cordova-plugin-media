@@ -195,7 +195,7 @@
     if (!self.avSession) {
         NSError* error = nil;
 
-        self.avSession = [AVAudioSession sharedInstance] 
+        self.avSession = [AVAudioSession sharedInstance]; 
         [self.avSession setCategory: AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
      
         if (error) {

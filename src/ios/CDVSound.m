@@ -192,7 +192,7 @@
 {
     BOOL bSession = YES;
 
-    if (!self.avSession) {
+    //if (!self.avSession) {
         NSError* error = nil;
 
         self.avSession = [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryPlayAndRecord withOptions:AVAudioSessionCategoryOptionDefaultToSpeaker error:nil];
@@ -203,7 +203,7 @@
             self.avSession = nil;
             bSession = NO;
         }
-    }
+   // }
     return bSession;
 }
 
